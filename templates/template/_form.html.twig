@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{# <a class="btn">{{ button_label|default('Save') }}</button> #}
+<a href="{{ path('component_new') }}">{{ button_label|default('Save') }}</a>
+{{ form_end(form) }}

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Entity;
-
+use App\Entity\Traits\TimestampTrait;
 use App\Repository\TemplateRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Template
 {
+    use TimestampTrait; 
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -25,18 +26,19 @@ class Template
     private $title;
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $createdAt;
-
-    /**
      * @ORM\OneToMany(targetEntity=TemplateConfig::class, mappedBy="template", orphanRemoval=true)
      */
     private $templateConfig;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Component::class, mappedBy="template")
+     */
+    private $template;
+
     public function __construct()
     {
         $this->templateConfig = new ArrayCollection();
+        $this->template = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -55,18 +57,7 @@ class Template
 
         return $this;
     }
-
-    public function getCreatedAt(): ?\DateTimeInterface
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(\DateTimeInterface $createdAt): self
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
+ 
 
     /**
      * @return Collection<int, TemplateConfig>
@@ -92,6 +83,36 @@ class Template
             // set the owning side to null (unless already changed)
             if ($templateConfig->getTemplate() === $this) {
                 $templateConfig->setTemplate(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Component>
+     */
+    public function getTemplate(): Collection
+    {
+        return $this->template;
+    }
+
+    public function addTemplate(Component $template): self
+    {
+        if (!$this->template->contains($template)) {
+            $this->template[] = $template;
+            $template->setTemplate($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTemplate(Component $template): self
+    {
+        if ($this->template->removeElement($template)) {
+            // set the owning side to null (unless already changed)
+            if ($template->getTemplate() === $this) {
+                $template->setTemplate(null);
             }
         }
 
