@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Upload{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h1>Hello ! ✅</h1>
+{#        <form action="{{ path('upload_post') }}" method="post">#}
+{#            <div class=""#}
+{#                 style="height: 150px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between">#}
+{#                <select id="template" name="template" class="template">#}
+{#                    <option value="" selected disabled>Choose a template</option>#}
+{#                    <option>L'Oréal template</option>#}
+{#                </select>#}
+{#                <input id="report" class="report" name="report" type="file">#}
+{#                <button>Generate report</button>#}
+{#            </div>#}
+
+{#        </form>#}
+        {{ form_start(form, {'action' : path('upload'), 'method' : 'POST'}) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
