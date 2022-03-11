@@ -5,7 +5,7 @@ body{
     right: 0%;
     top: 7.42%;
     bottom: 92.58%;
-    border: 0.3px solid #110F09;
+    border: 0.3px solid lightgrey;
 
 }
 .lign2h{
@@ -14,7 +14,7 @@ body{
     right: 0.47%;
     top: 92.61%;
     bottom: 7.39%;
-    border: 0.3px solid #110F09;
+    border: 0.3px solid lightgrey;
 }
 .lign3h{
     position: absolute;
@@ -22,7 +22,7 @@ body{
     right: 24.56%;
     top: 0%;
     bottom: 0%;
-    border: 0.3px solid #110F09;
+    border: 0.3px solid lightgrey;
 }   
 .create{
     position: absolute;
@@ -49,14 +49,16 @@ body{
    background: #a3a3a1;
 }
 .weladmin{
-    font-size: 39px;
+    font-size: 70px;
     position: absolute;
-    left: 15.46%;
-    right: 46.96%;
-    top: 24.55%;
+    left: 5.46%;
+    right: 0.96%;
+    top: 13.55%;
     bottom: 65.55%;
-    font-family: 'Brother 1816';
-   font-style: normal;  
+    font-family: 'freight-big-pro serif';
+   font-style: normal;
+   font-weight: 300; 
+   color: #161208; 
 }
 .generateR{
     cursor : pointer;
@@ -65,10 +67,11 @@ body{
     right: 1.92%;
     top: 4.87%;
     bottom: 47.95%;
-    color: black;
     font-size: 17px;
-    font-family: 'Brother 1816';
+    font-weight: 100; 
+    font-family: 'brother-1816, sans-serif';
     font-style: normal;
+    color: #161208; 
 }
 .textcreat{    position: absolute;
     font-size: 14px;
@@ -76,19 +79,22 @@ body{
     right: 23.02%;
     top: 40.55%;
     bottom: 37.64%;
-    font-family: 'Brother 1816';
+    font-size: 11px;
+    font-weight: 100; 
+    font-family: 'brother-1816, sans-serif';
     font-style: normal;
-    color: black;}
+    color: lightgrey;}
 .consulthistory{position: absolute;
     cursor : pointer;
     left: 7.44%;
     right: 3.03%;
     top: 3.87%;
     bottom: 48.11%;
-    font-size: 18px;
-    font-family: "Brother 1816";
+    font-size: 17px;
+    font-weight: 100; 
+    font-family: 'brother-1816, sans-serif';
     font-style: normal;
-    color: black;
+    color: #161208;;
 }  
 .blocconsult{
     
@@ -97,10 +103,11 @@ left: 7.44%;
 right: 3.03%;
 top: 24.87%;
 bottom: 45.66%;
-font-family: 'Brother 1816';
+font-size: 11px;
+font-weight: 100; 
+font-family: 'brother-1816, sans-serif';
 font-style: normal;
-color: black;
-font-size: 14px;
+color: lightgrey;
 
 }
 .createaccount{
@@ -110,10 +117,11 @@ font-size: 14px;
     right: 3.03%;
     top: 3.87%;
 bottom: 51.9%;
-font-size: 19px;
-font-family: 'Brother 1816';
-font-style: normal;
-color: black;
+font-size: 17px;
+    font-weight: 100; 
+    font-family: 'brother-1816, sans-serif';
+    font-style: normal;
+    color: #161208;;
 
 }
 .blocAccount{
@@ -122,10 +130,11 @@ color: black;
     right: 3.03%;
     top: 24.87%;
 bottom: 49.46%;
-font-family: 'Brother 1816';
+font-size: 11px;
+font-weight: 100; 
+font-family: 'brother-1816, sans-serif';
 font-style: normal;
-color: black;
-font-size: 14px;
+color: lightgrey;;
 }
 .gotowebsite{
 position: absolute;
