@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="trait1"></div>
+	<div class="trait2"></div>
+	<div class="trait3"></div>
+	{{ include("base/logo.html.twig") }}
+
+
+	{% for flash_error in app.flashes('verify_email_error') %}
+		<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+	{% endfor %}
+
+	<h1 class="h1">
+		Create admin account
+	</h1>
+
+	{{ form_start(registrationForm) }}
+
+	{{ form_widget(registrationForm.name, {'attr': {'class': 'name'}})}}
+	{{ form_widget(registrationForm.email, {'attr': {'class': 'email'}}) }}
+	{{ form_widget(registrationForm.plainPassword.first, {'attr': {'class': 'plainPassword'}}) }}
+	{{ form_widget(registrationForm.plainPassword.second, {'attr': {'class': 'plainPassword2'}}) }}
+	{{ form_widget(registrationForm.agreeTerms , {'attr': {'class': 'agree'}})}}
+	<div class="agreetext">
+		{{ form_label(registrationForm.agreeTerms)}}
+	</div>
+	<button type="submit" class="btn">CREATE</button>
+	{{ form_end(registrationForm) }}
+{% endblock %}

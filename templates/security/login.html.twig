@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login
+{% endblock %}
+
+{% block body %}
+
+	<div class="trait1"></div>
+	<div class="trait2"></div>
+	<div class="trait3"></div>
+	{{ include("base/logo.html.twig") }}
+	<form method="post">
+		{% if error %}
+			<div class="alert alert-danger" style="position: absolute;left:64.35%;right: 23.8%;top: 35.46%;bottom: 62.13%;font-family: 'Brother 1816';font-style: normal;font-weight: 300;font-size: 15px;line-height: 26px;text-transform: uppercase;color: #000000;">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		{% endif %}
+
+		{% if app.user %}
+			<div class="mb-3">
+				You are logged in as
+				{# {{ app.user.username }}, #}
+				<a href="{{ path('app_logout') }}">Logout</a>
+			</div>
+		{% endif %}
+
+		<h1 class="singin">
+			Sign in to continue
+		</h1>
+		<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="inputemail" placeholder="Email" autocomplete="email" required autofocus>
+		<input type="password" name="password" id="inputPassword" class="inputpass" autocomplete="current-password" placeholder="Password" required>
+		<div class="form-check">
+			<input class="stay" type="checkbox" name="_remember_me" checked/>
+			<label class="staylab">
+				Stay connected
+			</label>
+		</div>
+
+
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+		<button class="sing">
+			Sign in
+		</button>
+
+		{% if user == null %}
+			<a href="{{ path('app_register') }}" class="register">
+				CREATE
+			</a>
+			{% else %}
+
+		{% endif %}
+
+	</form>
+
+
+{% endblock %}

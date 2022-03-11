@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+
+{{ form_widget(form.roles, {'attr': {'class': 'roles1'}})}}
+{{ form_widget(form.name, {'attr': {'class': 'name1'}})}}
+{{ form_widget(form.email, {'attr': {'class': 'email1'}})}}
+{{ form_widget(form.password, {'attr': {'class': 'password1'}})}}
+
+
+<button class="btn1">
+	{{ button_label|default('SEND IDENTIFIERS') }}</button>
+
+{{ form_end(form) }}
