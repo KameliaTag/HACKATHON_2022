@@ -1,0 +1,147 @@
+body{
+.lign1h{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 7.42%;
+    bottom: 92.58%;
+    border: 0.3px solid #110F09;
+
+}
+.lign2h{
+    position: absolute;
+    left: 0%;
+    right: 0.47%;
+    top: 92.61%;
+    bottom: 7.39%;
+    border: 0.3px solid #110F09;
+}
+.lign3h{
+    position: absolute;
+    left: 75.44%;
+    right: 24.56%;
+    top: 0%;
+    bottom: 0%;
+    border: 0.3px solid #110F09;
+}   
+.create{
+    position: absolute;
+    left: 14.57%;
+    right: 68.57%;
+    top: 43.58%;
+    bottom: 21.91%;
+    border: 0.5px solid #110F09;
+}
+.consult{
+    position: absolute;
+    left: 32.46%;
+    right: 50.68%;
+    top: 43.43%;
+    bottom: 22.06%;
+    border: 0.5px solid #110F09;
+}
+.createuser{      
+   position: absolute;
+   left: 50.35%;
+   right: 32.79%;
+   top: 41.67%;
+   bottom: 23.82%;
+   background: #a3a3a1;
+}
+.weladmin{
+    font-size: 39px;
+    position: absolute;
+    left: 15.46%;
+    right: 46.96%;
+    top: 24.55%;
+    bottom: 65.55%;
+    font-family: 'Brother 1816';
+   font-style: normal;  
+}
+.generateR{
+    cursor : pointer;
+    position: absolute;
+    left: 6.55%;
+    right: 1.92%;
+    top: 4.87%;
+    bottom: 47.95%;
+    color: black;
+    font-size: 17px;
+    font-family: 'Brother 1816';
+    font-style: normal;
+}
+.textcreat{    position: absolute;
+    font-size: 14px;
+    left: 10.61%;
+    right: 23.02%;
+    top: 40.55%;
+    bottom: 37.64%;
+    font-family: 'Brother 1816';
+    font-style: normal;
+    color: black;}
+.consulthistory{position: absolute;
+    cursor : pointer;
+    left: 7.44%;
+    right: 3.03%;
+    top: 3.87%;
+    bottom: 48.11%;
+    font-size: 18px;
+    font-family: "Brother 1816";
+    font-style: normal;
+    color: black;
+}  
+.blocconsult{
+    
+position: absolute;
+left: 7.44%;
+right: 3.03%;
+top: 24.87%;
+bottom: 45.66%;
+font-family: 'Brother 1816';
+font-style: normal;
+color: black;
+font-size: 14px;
+
+}
+.createaccount{
+    cursor : pointer;
+    position: absolute;
+    left: 7.44%;
+    right: 3.03%;
+    top: 3.87%;
+bottom: 51.9%;
+font-size: 19px;
+font-family: 'Brother 1816';
+font-style: normal;
+color: black;
+
+}
+.blocAccount{
+    position: absolute;
+    left: 7.44%;
+    right: 3.03%;
+    top: 24.87%;
+bottom: 49.46%;
+font-family: 'Brother 1816';
+font-style: normal;
+color: black;
+font-size: 14px;
+}
+.gotowebsite{
+position: absolute;
+left: 14.57%;
+right: 71.19%;
+top: 82.51%;
+bottom: 12.4%;
+color: black;
+font-family: 'Brother 1816';
+font-style: normal;
+border: 0.3px solid #110F09;
+-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-align: center;
+    text-decoration: none;
+    
+}
+}

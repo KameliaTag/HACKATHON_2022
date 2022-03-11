@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,12 +10,12 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
-    #[Route(path: '/login', name: 'app_login')]
-    public function login(AuthenticationUtils $authenticationUtils): Response
+    #[Route(path: '/', name: 'app_login')]
+    public function login(AuthenticationUtils $authenticationUtils, UserRepository $userRepository): Response
     {
-        if ($this->getUser()) {
-            return $this->redirectToRoute('test');
-        }
+        // if ($this->getUser()) {
+        //     return $this->redirectToRoute('template_index');
+        // }
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
@@ -22,7 +23,9 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('security/login.html.twig', 
-        ['last_username' => $lastUsername, 'error' => $error]);
+        ['last_username' => $lastUsername,
+        'user' =>$userRepository->findAll(), 
+        'error' => $error]);
     }
 
     #[Route(path: '/logout', name: 'app_logout')]

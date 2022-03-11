@@ -1,63 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!
+{% block title %}Login
 {% endblock %}
 
 {% block body %}
 
-	<div style="position: absolute;left: 0%;right: 41.46%;top: 0%;bottom: 0%;background: #D8DADB;">
-		<div>
-			<img src="/img/wb.png" alt="" style="position: absolute;left: 4.06%;right: 92.45%;top: 1.85%;bottom: 94.81%;">
+	<div class="trait1"></div>
+	<div class="trait2"></div>
+	<div class="trait3"></div>
+	{{ include("base/logo.html.twig") }}
+	<form method="post">
+		{% if error %}
+			<div class="alert alert-danger" style="position: absolute;left:64.35%;right: 23.8%;top: 35.46%;bottom: 62.13%;font-family: 'Brother 1816';font-style: normal;font-weight: 300;font-size: 15px;line-height: 26px;text-transform: uppercase;color: #000000;">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		{% endif %}
+
+		{% if app.user %}
+			<div class="mb-3">
+				You are logged in as
+				{# {{ app.user.username }}, #}
+				<a href="{{ path('app_logout') }}">Logout</a>
+			</div>
+		{% endif %}
+
+		<h1 class="singin">
+			Sign in to continue
+		</h1>
+		<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="inputemail" placeholder="Email" autocomplete="email" required autofocus>
+		<input type="password" name="password" id="inputPassword" class="inputpass" autocomplete="current-password" placeholder="Password" required>
+		<div class="form-check">
+			<input class="stay" type="checkbox" name="_remember_me" checked/>
+			<label class="staylab">
+				Stay connected
+			</label>
 		</div>
 
 
-	</div>
-	<hr style="position: absolute;left: 0%;right: 0%;top: 9.22%;bottom: 92.78%;border: 0.5px solid #161208;">
-	<hr style="position: absolute;left: 24.59%;right: 37.22%;top: 51.22%; bottom: 46.78%;border: 0.3px solid #000000;transform: rotate(90deg);">
-	<hr style="position: absolute;left: 43.5%;right: 0.59%;top: 79.09%;bottom: 19.91%; border: 0.3px solid #000000; transform: rotate(180deg);
-																								">
-	<div>
-		<form method="post">
-			{% if error %}
-				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-			{% endif %}
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-			{% if app.user %}
-				<div class="mb-3">
-					You are logged in as
-					{{ app.user.username }},
-					<a href="{{ path('app_logout') }}">Logout</a>
-				</div>
-			{% endif %}
+		<button class="sing">
+			Sign in
+		</button>
 
-			<h1 style="position: absolute;left:64.35%;right: 23.8%;top: 35.46%;bottom: 62.13%;font-family: 'Brother 1816';font-style: normal;font-weight: 300;font-size: 15px;line-height: 26px;text-transform: uppercase;color: #000000;">
-				Sign in to continue
-			</h1>
-			<input style="position: absolute;left: 66.35%;right: 9.9%;top: 42.22%;bottom: 52.69%;border: 0.3px solid #161208;" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" autocomplete="email" required autofocus>
-			<input style="position: absolute;left: 66.35%;right: 9.9%;top: 51.67%;bottom: 43.24%;border: 0.3px solid #161208;" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Password" required>
-
-			<input
-			type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
-			{#
-																																																																																																																																																																																																											        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-																																																																																																																																																																																																											        See https://symfony.com/doc/current/security/remember_me.html
-																																																																																																																																																																																																											
-																																																																																																																																																																																																											        <div class="checkbox mb-3">
-																																																																																																																																																																																																											            <label>
-																																																																																																																																																																																																											                <input type="checkbox" name="_remember_me"> Remember me
-																																																																																																																																																																																																											            </label>
-																																																																																																																																																																																																											        </div>
-																																																																																																																																																																																																											    #}
-
-			<button style="position: absolute;left: 66.35%;right: 24.48%;top: 63.61%;bottom: 32.59%;background: #D8DADB;" type="submit">
-				Sign in
-			</button>
-			<a href="#" style="position: absolute;left: 77.97%;right: 15.62%;top: 64.54%;bottom: 33.8%;font-family: 'Brother 1816';font-style: normal;font-weight: 300;font-size: 12px;line-height: 18px;color: rgba(0, 0, 0, 0.15);">
-				Forgot your password
+		{% if user == null %}
+			<a href="{{ path('app_register') }}" class="register">
+				CREATE
 			</a>
-		</form>
-	</div>
+			{% else %}
+
+		{% endif %}
+
+	</form>
 
 
 {% endblock %}
