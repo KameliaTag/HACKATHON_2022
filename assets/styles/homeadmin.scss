@@ -43,11 +43,33 @@ body{
 .createuser{      
    position: absolute;
    left: 50.35%;
-   right: 32.79%;
-   top: 41.67%;
-   bottom: 23.82%;
-   background: #a3a3a1;
+    right: 32.79%;
+    top: 43.43%;
+    bottom: 22.06%;
+   border: 0.5px solid #110F09;
 }
+.create:hover {
+    background-color: #a3a3a1;
+    top: 20%;
+    // left: 50.35%;
+    // right: 32.79%;
+    top: 41.67%;
+    bottom: 23.82%;
+    color: white;
+    border: 0.5px;
+  }
+.consult:hover {
+    background-color: #a3a3a1;
+    top: 41.67%;
+    bottom: 23.82%;
+    border: 0.5px;
+}
+.createuser:hover {
+    background-color: #a3a3a1;
+    top: 41.67%;
+    bottom: 23.82%;
+    border: 0.5px;
+  }
 .weladmin{
     font-size: 70px;
     position: absolute;
@@ -60,6 +82,7 @@ body{
    font-weight: 300; 
    color: #161208; 
 }
+
 .generateR{
     cursor : pointer;
     position: absolute;
@@ -73,6 +96,12 @@ body{
     font-style: normal;
     color: #161208; 
 }
+.generateR:hover {
+    color: white;
+  }
+.textcreat:hover {
+    color: white;
+}
 .textcreat{    position: absolute;
     font-size: 14px;
     left: 10.61%;
@@ -83,7 +112,14 @@ body{
     font-weight: 100; 
     font-family: 'brother-1816, sans-serif';
     font-style: normal;
-    color: lightgrey;}
+    color: lightgrey;
+}
+.consulthistory:hover {
+    color: white;
+}
+.blocconsult:hover {
+    color: white;
+}
 .consulthistory{position: absolute;
     cursor : pointer;
     left: 7.44%;
@@ -96,8 +132,8 @@ body{
     font-style: normal;
     color: #161208;;
 }  
+
 .blocconsult{
-    
 position: absolute;
 left: 7.44%;
 right: 3.03%;
@@ -110,14 +146,20 @@ font-style: normal;
 color: lightgrey;
 
 }
+.createaccount:hover {
+    color: white;
+}
+.blocAccount:hover {
+    color: white;
+}
 .createaccount{
     cursor : pointer;
     position: absolute;
     left: 7.44%;
     right: 3.03%;
     top: 3.87%;
-bottom: 51.9%;
-font-size: 17px;
+    bottom: 48.11%;
+    font-size: 17px;
     font-weight: 100; 
     font-family: 'brother-1816, sans-serif';
     font-style: normal;
@@ -129,24 +171,24 @@ font-size: 17px;
     left: 7.44%;
     right: 3.03%;
     top: 24.87%;
-bottom: 49.46%;
-font-size: 11px;
-font-weight: 100; 
-font-family: 'brother-1816, sans-serif';
-font-style: normal;
-color: lightgrey;;
+    bottom: 45.66%;
+    font-size: 11px;
+    font-weight: 100; 
+    font-family: 'brother-1816, sans-serif';
+    font-style: normal;
+    color: lightgrey;;
 }
 .gotowebsite{
-position: absolute;
-left: 14.57%;
-right: 71.19%;
-top: 82.51%;
-bottom: 12.4%;
-color: black;
-font-family: 'Brother 1816';
-font-style: normal;
-border: 0.3px solid #110F09;
--webkit-appearance: button;
+   position: absolute;
+   left: 14.57%;
+    right: 71.19%;
+    top: 82.51%;
+    bottom: 12.4%;
+    color: black;
+    font-family: 'Brother 1816';
+    font-style: normal;
+    border: 0.3px solid #110F09;
+    -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
     text-align: center;
