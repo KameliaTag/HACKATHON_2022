@@ -95,6 +95,7 @@ body{
     font-family: 'brother-1816, sans-serif';
     font-style: normal;
     color: #161208; 
+    text-decoration: none;
 }
 .generateR:hover {
     color: white;
@@ -130,7 +131,8 @@ body{
     font-weight: 100; 
     font-family: 'brother-1816, sans-serif';
     font-style: normal;
-    color: #161208;;
+    color: #161208;
+    text-decoration: none;
 }  
 
 .blocconsult{
@@ -163,7 +165,8 @@ color: lightgrey;
     font-weight: 100; 
     font-family: 'brother-1816, sans-serif';
     font-style: normal;
-    color: #161208;;
+    color: #161208;
+    text-decoration: none;
 
 }
 .blocAccount{
@@ -194,5 +197,10 @@ color: lightgrey;
     text-align: center;
     text-decoration: none;
     
+}
+.gotowebsite:hover {
+    color: white;
+    background-color: #a3a3a1;
+    border: 0.3px;
 }
 }

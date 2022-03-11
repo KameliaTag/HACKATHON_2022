@@ -45,7 +45,7 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
-
+            $user->setToken(rtrim(strtr(base64_encode(random_bytes(150)), '+/', '-_'), '='));
             $entityManager->persist($user);
             $entityManager->flush();
 

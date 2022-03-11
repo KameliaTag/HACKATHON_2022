@@ -54,15 +54,12 @@ class UsersAuthenticator extends AbstractLoginFormAuthenticator
         if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
             return new RedirectResponse($targetPath);
         }
-
-        
-          // ATTENTION AVEC CECI LE ROLE ADMIN ET SUPER_ADMIN SERONT AUSSI REDIRIGE
-          if ($this->security->isGranted("ROLE_ADMIN")) {
+          if ($this->security->isGranted("ROLE_USER")) {
+            return new RedirectResponse($this->urlGenerator->generate('home'));
+        }
+        if ($this->security->isGranted("ROLE_ADMIN")) {
             return new RedirectResponse($this->urlGenerator->generate('home_Admin'));
         }
-        return new RedirectResponse($this->urlGenerator->generate('home'));
-           
-        
         //return new RedirectResponse($this->urlGenerator->generate('home'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
