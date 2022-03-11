@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
@@ -11,13 +12,29 @@ class Parser
     {
     }
 
+    public function getHeaders(string $filename): array
+    {
+        $baseRoute = $this->parameters->get('kernel.project_dir');
+        $reader = IOFactory::createReader('Xlsx');
+        $spreadsheet = $reader->load("$baseRoute/uploads/$filename.xlsx");
+        $data = $spreadsheet->getSheet(1)->toArray();
+
+        // Get headers (Check if header is not located at first row)
+        $i = 0;
+        do {
+            $filters = array_filter($data[$i]);
+            $headers = $data[$i++];
+        } while (empty($filters));
+
+        return $headers;
+    }
+
     public function parseXls(string $filename): array
     {
         $res = [];
-
         $baseRoute = $this->parameters->get('kernel.project_dir');
         try {
-            $reader = new Xlsx();
+            $reader = IOFactory::createReader('Xlsx');
             $spreadsheet = $reader->load("$baseRoute/uploads/$filename.xlsx");
 
             $data = $spreadsheet->getSheet(1)->toArray();

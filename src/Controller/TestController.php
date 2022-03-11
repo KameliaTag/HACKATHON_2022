@@ -49,7 +49,6 @@ class TestController extends AbstractController
     {
         $filename = $request->request->get('report');
         dd($request);
-        $file = $request->files->get('report');
 
         dd($filename, $file);
     }
@@ -61,4 +60,6 @@ class TestController extends AbstractController
             'controller_name' => 'TestController',
         ]);
     }
+
+
 }

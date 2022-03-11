@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create and generate a study report{% endblock %}
+
+{% block body %}
+    <div class="report-generation">
+        <div class="head">
+
+        </div>
+        <div class="report-builder-container">
+            <div class="report-builder">
+                <form id="report-form" action="{{ path('report_create') }}" method="post" enctype="multipart/form-data">
+                    <div class="f-wrapper">
+                        <div class="upload area">
+                            <div class="pending-upload ">
+                                <img class="mb-3" src="{{ asset('images/arrow_download.svg') }}">
+                                <p><h4>UPLOAD YOUR DATA</h4></p>
+                                <p>Drag and drop your file here in .CSV format only</p>
+                                <p>or</p>
+                                <div class="upload-wrapper">
+                                    <input type="file" class="report-upload" name="report" id="report-upload">
+                                    <button type="button" class="action-upload text-uppercase cursor-pointer">Choose a
+                                        file
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="success-upload hidden flex-col items-center">
+                                <div class="success-icon">
+                                    <img src="{{ asset('images/success-wrapper.svg') }}">
+                                    <img src="{{ asset('images/success-mark.svg') }}">
+                                </div>
+                                <h2>Downloaded data</h2>
+                                <div class="upload-wrapper">
+                                    <button type="button" class="action-upload text-uppercase cursor-pointer">Choose
+                                        another file
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form area large">
+                            <h4 class="text-uppercase mb-3">Please fill in missing data</h4>
+                            <div class="flex w-full justify-between">
+                                <div class="flex-col">
+                                    <input type="text" id="title" name="title" class="form-control" placeholder="Title">
+                                    <textarea class="form-control" name="description" placeholder="Your description"></textarea>
+                                </div>
+                                <div class="flex-col">
+                                    <input type="text" id="title" name="population" class="form-control"
+                                           placeholder="Report on x persons">
+                                    <input type="text" id="title" name="product" class="form-control"
+                                           placeholder="Products">
+                                    <span>mandatory fields *</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-wrapper">
+                        <div class="graph area">
+                            <h4 class="text-uppercase w-1/2 mb-4">Select your data graph</h4>
+                            <div class="slide-graph w-full flex justify-between">
+                                <img id="graph-type-left" class="cursor-pointer"
+                                     src="{{ asset('images/chev-left.svg') }}">
+                                <ul class="graph-type-list">
+                                    <li class="graph-type text-uppercase">
+                                        <span>Chart pie</span>
+                                        <input type="radio" class="hidden" name="graph_type" value="1" checked>
+                                    </li>
+                                    <li class="graph-type text-uppercase">
+                                        <span></span>Pie</span>
+                                        <input type="radio" class="hidden" name="graph_type" value="2">
+                                    </li>
+                                    <li class="graph-type text-uppercase">
+                                        <span></span>Radar</span>
+                                        <input type="radio" class="hidden" name="graph_type" value="3">
+                                    </li>
+                                    <li class="graph-type text-uppercase">
+                                        <span>Line chart</span>
+                                        <input type="radio" class="hidden" name="graph_type" value="4">
+                                    </li>
+                                    <li class="graph-type text-uppercase">
+                                        <span>Multi Series Pie</span>
+                                        <input type="radio" class="hidden" name="graph_type" value="5">
+                                    </li>
+                                    <li class="graph-type text-uppercase selected">
+                                        <span>Stacked bar/line</span>
+                                        <input type="radio" class="hidden" name="graph_type" value="6">
+                                    </li>
+                                </ul>
+                                <img id="graph-type-right" class="cursor-pointer"
+                                     src="{{ asset('images/chev-right.svg') }}">
+                            </div>
+                        </div>
+                        <div id="action-create"
+                             class="create area position-relative flex justify-center items-center cursor-pointer">
+                            <h1 class="text-uppercase">Click to create</h1>
+                            <img class="action-create" src="{{ asset('images/arrow-create.svg') }}">
+                            <input id="action-create-btn" type="submit" class="hidden" name="btn">
+                        </div>
+                        <div id="action-add" class="add-wrapper">
+                            <div class="action-add cursor-pointer">
+                                <div class="icon-add position-relative">
+                                    <span class="line-h"></span>
+                                    <span class="line-v"></span>
+                                </div>
+                                <span>add second page</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -40,9 +40,11 @@ class ReportData
     /**
      * @param string $report
      */
-    public function setReport(string $report): void
+    public function setReport(string $report): self
     {
         $this->report = $report;
+
+        return $this;
     }
 
     /**
@@ -56,9 +58,11 @@ class ReportData
     /**
      * @param File $reportFile
      */
-    public function setReportFile(File $reportFile): void
+    public function setReportFile(File $reportFile): self
     {
         $this->reportFile = $reportFile;
+
+        return $this;
     }
 
     /**
