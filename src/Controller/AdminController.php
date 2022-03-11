@@ -11,12 +11,10 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
-/**
- * @Route ("/admin", name="admin_")
- */
+
 class AdminController extends AbstractController
 {
-    #[Route('/index', name: 'index')]
+    #[Route('/homeAdmin', name: 'home_Admin')]
     public function index(): Response
     {
         return $this->render('admin/index.html.twig', [
