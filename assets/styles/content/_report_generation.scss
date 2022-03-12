@@ -1,0 +1,135 @@
+
+.report-generation {
+
+  .head {
+    padding : 70px 8%;
+    border-left: 0.3px solid lightgrey;
+    margin-left: 11%;
+  }
+
+  .report-builder-container {
+    border-top: 0.3px solid lightgrey;
+    border-bottom: 0.3px solid lightgrey;
+    border-left: 0.3px solid lightgrey;
+    margin-left: 11%;
+    padding-left: 8%;
+
+    .report-builder {
+      padding: 45px 0;
+      width: fit-content;
+
+      .area {
+        border: 0.5px solid #110F09;
+        padding: 35px;
+        margin: 0 20px 20px 0;
+        width: 325px;
+        height: 375px;
+
+        &.large {
+          width: 760px;
+        }
+
+        &.creation {
+          color: #FFFF;
+          background-color: #BAB9B3;
+          border: none;
+        }
+      }
+
+      .f-wrapper {
+        display: flex;
+      }
+
+      .s-wrapper {
+        display: flex;
+      }
+
+      .form-input {
+        border: 0.3px solid #110F09;
+        width: 305px;
+        padding: 7px 13px;
+        height: 35px;
+        margin-bottom: 15px;
+
+        &.textarea {
+          resize: none;
+          height: 125px;
+        }
+      }
+
+      .upload-wrapper {
+        input {
+          display: none;
+        }
+
+        button {
+          height: 32px;
+          width: 155px;
+          border: 0.26px solid #110F09;
+          background-color: #110F09;
+          color: #FFFFFF;
+        }
+
+      }
+
+      .action-create {
+        position: absolute;
+        left: 50px;
+        bottom: 58px;
+      }
+
+      .add-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .icon-add {
+          border: 0.5px solid #151515;
+          height: 100px;
+          width: 100px;
+
+          .line-v, .line-h {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 51px;
+            border: 0.5px solid #151515;
+          }
+
+          .line-v {
+            transform: rotate(90deg);
+            width: 50px;
+            left: 25%;
+          }
+        }
+      }
+
+      .success-upload {
+        .success-icon {
+          width: fit-content;
+          position: relative;
+          img:last-of-type {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .graph-type-list {
+      .graph-type {
+        &.selected {
+          display: block;
+        }
+
+        &:not(.selected) {
+          display: none;
+        }
+      }
+    }
+  }
+}
