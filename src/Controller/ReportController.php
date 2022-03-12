@@ -37,12 +37,14 @@ class ReportController extends AbstractController
         $em->flush();
 
         if (strpos($filename, '.csv') != false) {
-            $data = $parser->parseCsv('test');
+            $data = $parser->parseCsv('wired-beauty-csv');
         } elseif(strpos($filename, '.xlsx') != false) {
-            $data = $parser->parseXls('test');
+            $data = $parser->parseXls('wired-beauty-data');
         } else {
             throw new \Exception('You must provide .csv or .xlsx file');
         }
+
+
 
         $reference = 'score_skinbiosense';
         $product = 417432;
@@ -58,11 +60,11 @@ class ReportController extends AbstractController
             [$this->getAlias($reference, $value[$reference])]
             [] = $value['mesure'];
         }
-
+        
         $formattedRes = [];
         foreach ($res as $keyProduct => $products) {
             foreach ($products as $keyReference => $value) {
-                $res[$keyProduct][$keyReference] = count($value) ? round(array_sum($value) / count($value), 2) : 0;
+                $res[$keyProduct][$keyReference] = count($value) ? round(array_sum($value) / count($value), 3) : 0;
             }
 
             $formattedRes[] = [
@@ -71,6 +73,7 @@ class ReportController extends AbstractController
                 'values' => array_values($res[$keyProduct]),
             ];
         }
+
 
         return $this->render('report/create.html.twig', [
             'chart_data' => [
