@@ -20,7 +20,7 @@
           width: 760px;
         }
 
-        &.create {
+        &.creation {
           background-color: #BAB9B3;
           border: none;
         }
@@ -34,12 +34,17 @@
         display: flex;
       }
 
-      .form-control {
+      .form-input {
         border: 0.3px solid #110F09;
         width: 305px;
         padding: 7px 13px;
         height: 35px;
         margin-bottom: 15px;
+
+        &.textarea {
+          resize: none;
+          height: 125px;
+        }
       }
 
       .upload-wrapper {

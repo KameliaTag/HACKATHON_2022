@@ -3,6 +3,7 @@
 {% block title %}Create and generate a study report{% endblock %}
 
 {% block body %}
+{#    {{ include("base/navbarhome.twig") }}#}
     <div class="report-generation">
         <div class="head">
 
@@ -31,8 +32,7 @@
                                 </div>
                                 <h2>Downloaded data</h2>
                                 <div class="upload-wrapper">
-                                    <button type="button" class="action-upload text-uppercase cursor-pointer">Choose
-                                        another file
+                                    <button type="button" class="action-upload text-uppercase cursor-pointer">another file
                                     </button>
                                 </div>
                             </div>
@@ -41,14 +41,14 @@
                             <h4 class="text-uppercase mb-3">Please fill in missing data</h4>
                             <div class="flex w-full justify-between">
                                 <div class="flex-col">
-                                    <input type="text" id="title" name="title" class="form-control" placeholder="Title">
-                                    <textarea class="form-control" name="description"
+                                    <input type="text" id="title" name="title" class="form-input" placeholder="Title">
+                                    <textarea class="form-input textarea" name="description" rows="5" cols="auto"
                                               placeholder="Your description"></textarea>
                                 </div>
                                 <div class="flex-col">
-                                    <input type="text" id="population" name="population" class="form-control"
+                                    <input type="text" id="population" name="population" class="form-input"
                                            placeholder="Report on x persons">
-                                    <input type="text" id="product" name="product" class="form-control"
+                                    <input type="text" id="product" name="product" class="form-input"
                                            placeholder="Products">
                                     <span>mandatory fields *</span>
                                 </div>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <div id="action-create"
-                             class="create area position-relative flex justify-center items-center cursor-pointer">
+                             class="creation area position-relative flex justify-center items-center cursor-pointer">
                             <h1 class="text-uppercase">Click to create</h1>
                             <img class="action-create" src="{{ asset('images/arrow-create.svg') }}">
                             <input id="action-create-btn" type="submit" class="hidden" name="btn">
@@ -99,7 +99,7 @@
                                     <span class="line-h"></span>
                                     <span class="line-v"></span>
                                 </div>
-                                <span>add second page</span>
+                                <span class="text-xs">add second page</span>
                             </div>
                         </div>
                     </div>

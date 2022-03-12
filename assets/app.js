@@ -39,19 +39,13 @@ $('#graph-type-left').click(() => {
 });
 
 $('#action-create').click(() => {
-    console.log($('#report-form'));
     $('#report-form').submit();
 });
 
 
 if ($('#chart-data').length ) {
     const chartData = $('#chart-data').data('chart');
-    let labels = [];
-    let values = [];
-
-    console.log(chartData);
     const chart = new Chart($('#dataviz-chart'), ChartConfig.load(chartData.type, chartData.data));
-
 
 }
 

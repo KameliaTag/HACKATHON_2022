@@ -39,7 +39,7 @@ class ReportController extends AbstractController
         //$data = $parser->parseXls($upload->getClientOriginalName());
         $data = $parser->parseXls('test');
         $reference = 'score_skinbiosense';
-        $product = 100218;
+        $product = 417432;
 
         $res = [];
         foreach ($data as $value) {
@@ -75,6 +75,7 @@ class ReportController extends AbstractController
             'title' => $request->request->get('title'),
             'population' => $request->request->get('population'),
             'product' => $request->request->get('product'),
+            'description' => $request->request->get('description'),
         ]);
     }
 

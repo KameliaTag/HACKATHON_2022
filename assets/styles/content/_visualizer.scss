@@ -7,6 +7,23 @@
   .dataviz-header {
     width: 100%;
     display: flex;
+    align-items: center;
+    background-color: #161208;
+    color: white;
+
+    .dv-logo {
+      padding: 22px 35px;
+      width: 170px;
+    }
+
+    .dv-title {
+      flex: 1;
+      padding: 22px 65px;
+    }
+
+    .dv-date {
+      padding: 22px 35px;
+    }
   }
 
   .dataviz-content {
@@ -16,6 +33,12 @@
 
     .content-left {
       padding: 35px;
+      width: 170px;
+      border-right: 0.3px solid lightgrey;
+
+      .dv-desc {
+
+      }
     }
 
     .content-right {
@@ -26,5 +49,16 @@
   .dataviz-footer {
     width: 100%;
     display: flex;
+    border-top: 0.3px solid lightgrey;
+
+    .dv-client {
+      padding: 15px 45px;
+      width: 170px;
+      border-right: 0.3px solid lightgrey;
+    }
+
+    .dv-product, .dv-population, dv.page {
+      padding: 15px 45px;
+    }
   }
 }
