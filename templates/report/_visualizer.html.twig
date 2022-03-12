@@ -24,8 +24,10 @@
 <div class="dataviz-footer">
     <div class="dv-client">L'Oréal</div>
     <div class="dv-wrapper flex justify-between items-center w-full">
-        <div class="dv-product">{{ product ?? 'Product : SKC' }}</div>
-        <div class="dv-population text-uppercase">Report on {{ population ?? 50 }} persons</div>
+        <div class="dv-product">{{ product ? 'Product : ' ~ product : 'Product : SKC' }}</div>
+        {% if population is defined %}
+            <div class="dv-population text-uppercase">Report on {{ population ?? 50 }} persons</div>
+        {% endif %}
         <div class="dv-page">1/1</div>
     </div>
 </div>

@@ -28,16 +28,22 @@ class ReportController extends AbstractController
         if (!$upload) {
             throw new \Exception('You must upload a file to create a report');
         }
-
+        $filename = $upload->getClientOriginalName();
         $reportData = (new ReportData())
-            ->setReport($upload->getClientOriginalName())
+            ->setReport($filename)
             ->setReportFile($upload);
 
         $em->persist($reportData);
         $em->flush();
 
-        //$data = $parser->parseXls($upload->getClientOriginalName());
-        $data = $parser->parseXls('test');
+        if (strpos($filename, '.csv') != false) {
+            $data = $parser->parseCsv('test');
+        } elseif(strpos($filename, '.xlsx') != false) {
+            $data = $parser->parseXls('test');
+        } else {
+            throw new \Exception('You must provide .csv or .xlsx file');
+        }
+
         $reference = 'score_skinbiosense';
         $product = 417432;
 

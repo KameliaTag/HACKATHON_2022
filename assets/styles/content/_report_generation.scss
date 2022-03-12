@@ -1,12 +1,21 @@
 
 .report-generation {
+
+  .head {
+    padding : 70px 8%;
+    border-left: 0.3px solid lightgrey;
+    margin-left: 11%;
+  }
+
   .report-builder-container {
-    border-top: 0.3px solid #110F09;
-    border-bottom: 0.3px solid #110F09;
+    border-top: 0.3px solid lightgrey;
+    border-bottom: 0.3px solid lightgrey;
+    border-left: 0.3px solid lightgrey;
+    margin-left: 11%;
+    padding-left: 8%;
 
     .report-builder {
       padding: 45px 0;
-      margin-left: 175px;
       width: fit-content;
 
       .area {

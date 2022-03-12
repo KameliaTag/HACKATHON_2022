@@ -3,10 +3,10 @@
 {% block title %}Create and generate a study report{% endblock %}
 
 {% block body %}
-{#    {{ include("base/navbarhome.twig") }}#}
+    {{ include("base/nav.html.twig") }}
     <div class="report-generation">
-        <div class="head">
-
+        <div class="head h-1/4">
+            <h1 class="w-1/4">Create and generate a study report</h1>
         </div>
         <div class="report-builder-container">
             <div class="report-builder">
@@ -16,7 +16,7 @@
                             <div class="pending-upload ">
                                 <img class="mb-3" src="{{ asset('images/arrow_download.svg') }}">
                                 <p><h4>UPLOAD YOUR DATA</h4></p>
-                                <p>Drag and drop your file here in .CSV format only</p>
+                                <p>Drag and drop your file here</p>
                                 <p>or</p>
                                 <div class="upload-wrapper">
                                     <input type="file" class="report-upload" name="report" id="report-upload">
@@ -32,16 +32,17 @@
                                 </div>
                                 <h2>Downloaded data</h2>
                                 <div class="upload-wrapper">
-                                    <button type="button" class="action-upload text-uppercase cursor-pointer">another file
+                                    <button type="button" class="action-upload text-uppercase cursor-pointer">another
+                                        file
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <div class="form area large">
-                            <h4 class="text-uppercase mb-3">Please fill in missing data</h4>
+                            <h4 class="text-uppercase mb-3">Please fill in missing fields</h4>
                             <div class="flex w-full justify-between">
                                 <div class="flex-col">
-                                    <input type="text" id="title" name="title" class="form-input" placeholder="Title">
+                                    <input type="text" id="title" name="title" class="form-input" placeholder="Title *">
                                     <textarea class="form-input textarea" name="description" rows="5" cols="auto"
                                               placeholder="Your description"></textarea>
                                 </div>
@@ -49,7 +50,7 @@
                                     <input type="text" id="population" name="population" class="form-input"
                                            placeholder="Report on x persons">
                                     <input type="text" id="product" name="product" class="form-input"
-                                           placeholder="Products">
+                                           placeholder="Product *">
                                     <span>mandatory fields *</span>
                                 </div>
                             </div>
@@ -79,7 +80,7 @@
                                         <input type="radio" class="hidden" name="graph_type" value="pie2">
                                     </li>
                                     <li class="graph-type text-uppercase selected">
-                                        <span>Stacked bar</span>
+                                        <span>Bar chart</span>
                                         <input type="radio" class="hidden" name="graph_type" value="bar">
                                     </li>
                                 </ul>
@@ -106,9 +107,10 @@
                 </form>
             </div>
         </div>
-
-        <section id="data-visualization" class="data-visualization">
-            {% include 'report/_visualizer.html.twig' %}
-        </section>
+        {% if chart_data is defined %}
+            <section id="data-visualization" class="data-visualization">
+                {% include 'report/_visualizer.html.twig' %}
+            </section>
+        {% endif %}
     </div>
 {% endblock %}
