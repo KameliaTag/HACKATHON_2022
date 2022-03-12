@@ -44,6 +44,14 @@
 
     .content-right {
       padding: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .chart-wrapper {
+        width: 700px;
+        height: auto;
+      }
     }
   }
 
