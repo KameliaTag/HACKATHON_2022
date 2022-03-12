@@ -53,6 +53,10 @@ services:
       POSTGRES_USER: postgres
     volumes:
       - db-data:/var/lib/postgresql/data:rw
+    ports:
+      - target: 5432
+        published: 5432
+        protocol: tcp
 
   adminer:
     container_name: hackathon_adminer
