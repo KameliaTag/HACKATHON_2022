@@ -1,0 +1,161 @@
+body{
+    .weluser{
+        position: absolute;
+        left: 3.55%;
+        right: 11.82%;
+        top: 13.2%;
+        bottom: 73.32%;
+        font-size: 70px;
+        font-family: "freight-big-pro serif";
+        font-style: normal;
+        font-weight: 300;
+        color: #161208;
+    }
+    .consultuser{
+        position: absolute;
+        left: 9.57%;
+        right: 55.68%;
+        top: 43.58%;
+        bottom: 22.91%;
+        border: 0.5px solid #110F09;
+       
+    }
+    .consUser{
+        position: absolute;
+        left: 2.55%;
+        right: 0.49%;
+        top: 1.87%;
+        bottom: 47.95%;
+        font-size: 20px;
+        font-weight: 100;
+        font-family: "brother-1816, sans-serif";
+        font-style: normal;
+        color: #161208;
+        text-decoration: none;
+    }
+    .consUser:hover {
+        color: white;
+    }
+    .h2user{
+        position: absolute;
+        left: 3.62%;
+        right: 0.16%;
+        top: 32.21%;
+        bottom: 43.27%;
+        font-size: 17px;
+        font-weight: 100;
+        font-family: "brother-1816, sans-serif";
+        font-style: normal;
+        color: #161208;
+        text-decoration: none;
+    }
+    .h2user:hover {
+        color: white;
+    }
+    .h22user{
+        position: absolute;
+        left: 3.6%;
+        right: 5.32%;
+        top: 52.99%;
+        bottom: 36.5%;
+        font-size: 17px;
+        font-weight: 100;
+        font-family: "brother-1816, sans-serif";
+        font-style: normal;
+        color: #161208;
+        text-decoration: none;
+    }
+    .h22user:hover {
+        color: white;
+    }
+    .h3user{
+        position: absolute;
+        left: 3.88%;
+        right: 38.38%;
+        top: 65.99%;
+        bottom: 34.19%;
+        font-size: 11px;
+        font-weight: 100;
+        font-family: "brother-1816, sans-serif";
+        font-style: normal;
+        color: lightgrey;
+    }
+    .h3user:hover {
+        color: white;
+    }
+    .consult1{
+        position: absolute;
+        left: 50.35%;
+        right: 32.79%;
+        top: 43.58%;
+        bottom: 22.91%;
+        border: 0.5px solid #110F09;
+    }
+    .consulthistory1{
+        cursor : pointer;
+        position: absolute;
+        left: 6.33%;
+        right: 0.04%;
+        top: 7.93%;
+        bottom: 51.9%;
+        font-size: 17px;
+        font-weight: 100;
+        font-family: "brother-1816, sans-serif";
+        font-style: normal;
+        color: #161208;
+        text-decoration: none;
+    }
+    .consulthistory1:hover {
+        color: white;
+    }
+    .blocconsult1{
+        position: absolute;
+        left: 10.36%;
+        right: 10.76%;
+        top: 26.39%;
+        bottom: 49.11%;
+        font-size: 11px;
+        font-weight: 100;
+        font-family: "brother-1816, sans-serif";
+        font-style: normal;
+        color: lightgrey;
+    }
+    .blocconsult1:hover {
+        color: white;
+    }
+    .consultuser:hover {
+        background-color: #a3a3a1;
+        top: 41.67%;
+        bottom: 23.82%;
+        border: 0.5px;
+    }
+    .consult1:hover {
+        background-color: #a3a3a1;
+        top: 41.67%;
+        bottom: 23.82%;
+        border: 0.5px;
+    }
+    .gotowebsite1{
+        position: absolute;
+        left: 9.57%;
+        right: 77.19%;
+        top: 82.51%;
+        bottom: 12.4%;
+        color: black;
+        font-family: 'Brother 1816';
+        font-style: normal;
+        border: 0.3px solid #110F09;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-align: center;
+        text-decoration: none;
+             
+    }
+    .gotowebsite1:hover {
+        color: white;
+        background-color:#000000;
+        border: 0.3px;
+    }
+    
+}

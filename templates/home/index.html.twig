@@ -5,13 +5,44 @@
 
 
 {% block body %}
-	{{ include("base/nav.html.twig") }}
+	{{ include("base/navbarhome.twig") }}
 
 	<div class="lign1h"></div>
 	<div class="lign2h"></div>
 	<div class="lign3h"></div>
 
-
+	<h1 class="weluser">
+		Welcome L'Oréal
+		<br>
+		happy to see you again
+	</h1>
+	<div class="consultuser">
+		<a href="#" class="consUser">Consult YOUR PERSONALIZED
+			<br>
+			STUDY REPORT CREATED BY WIRED BEAUTY
+		</a>
+		<h2 class="h2user">here you will find each study report you ordered from
+			<br>
+			us you can download them in .PDF
+		</h2>
+		<h2 class="h22user">
+			if you have any questions, please contact us
+		</h2>
+		<h3 class="h3user">
+			+33.6.71.66.24.26
+			<br>
+			mail@wiredbeauty.com
+			<br>
+			Champ de Mars, 5Av Anatoie
+			<br>
+			France, 75007 Paris
+		</h3>
+	</div>
+	<div class="consult1">
+		<a href="#" class="consulthistory1">CONSULT THE HISTORY</a>
+		<h2 class="blocconsult1">consult previously generated reports</h2>
+	</div>
+	<a href="#" class="gotowebsite1">GO TO WEBSITE</a>
 	{{ include("base/footer.html.twig") }}
 
 {% endblock %}
