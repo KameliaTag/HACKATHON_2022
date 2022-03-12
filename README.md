@@ -1,14 +1,7 @@
-### Getting started
+## GITHUB
+[Original repository github](https://github.com/KameliaTag/HACKATHON_2022)
 
-```bash
-docker-compose build --pull --no-cache
-docker-compose up -d
-```
-
-```
-# URL
-http://127.0.0.1
-
-# Env DB
-DATABASE_URL="postgresql://postgres:password@db:5432/db?serverVersion=13&charset=utf8"
-```
+## Contributors
+[Kamelia](https://github.com/KameliaTag) \
+[Arthur](https://github.com/Haborym) \
+[Prado](https://github.com/maheryy)

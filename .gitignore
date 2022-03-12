@@ -31,6 +31,5 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
-/wordpress/
 /uploads/
 /public/uploads/
