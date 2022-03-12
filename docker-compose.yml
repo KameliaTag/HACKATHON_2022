@@ -47,6 +47,8 @@ services:
     container_name: hackathon_postgres
     image: postgres:13-alpine
     restart: always
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: db

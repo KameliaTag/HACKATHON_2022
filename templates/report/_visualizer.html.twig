@@ -1,0 +1,33 @@
+<div class="dataviz-header">
+    <div class="dv-logo">
+        <img class="" height="36" width="auto" src="{{ asset('images/wb-black.png') }}">
+    </div>
+    <h2 class="dv-title text-uppercase">Report <span>of study</span></h2>
+    <div class="dv-date">Date : {{ date ?? ('now' | date('d/m/Y')) }}</div>
+    {# <button id="dataviz-export">Export</button> #}
+</div>
+<div class="dataviz-content">
+    {% if chart_data is defined %}
+        <div id="chart-data" data-chart="{{ chart_data | json_encode }}"></div>
+    {% endif %}
+    <div class="content-left w-1/5">
+        {% if description is defined %}
+            <div class="dv-desc">
+                {{ description }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="content-right w-full">
+        <canvas id="dataviz-chart" width="100" height="100"></canvas>
+    </div>
+</div>
+<div class="dataviz-footer">
+    <div class="dv-client">L'Oréal</div>
+    <div class="dv-wrapper flex justify-between items-center w-full">
+        <div class="dv-product">{{ product ? 'Product : ' ~ product : 'Product : SKC' }}</div>
+        {% if population is defined %}
+            <div class="dv-population text-uppercase">Report on {{ population ?? 50 }} persons</div>
+        {% endif %}
+        <div class="dv-page">1/1</div>
+    </div>
+</div>

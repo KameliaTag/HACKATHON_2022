@@ -1,6 +1,23 @@
 @import "~bootstrap/scss/bootstrap";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 @import "register";
 @import "login";
 @import "homeadmin";
 @import "admin";
 @import "user";
+
+@import "content/report_generation";
+@import "content/visualizer";
+@import "utils/utils";
