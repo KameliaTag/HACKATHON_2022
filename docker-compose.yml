@@ -79,6 +79,10 @@ services:
     volumes:
       - ./wordpress:/var/www/html
 
+  mailer:
+    image: schickling/mailcatcher
+    ports: [ 1025, 1080 ]
+
   wp_db:
     container_name: hackhaton_wp_db
     image: mysql:8
