@@ -5,14 +5,12 @@
 
 
 {% block body %}
-	{{ include("base/navbarhome.twig") }}
-
-	<div class="lign1h"></div>
-	<div class="lign2h"></div>
-	<div class="lign3h"></div>
+	{{ include("base/navbarhome.twig") }}{# <div class="lign1h"></div> #}
+	{# <div class="lign2h"></div> #}<div class="lign3h"> </div>
 
 	<h1 class="weluser">
-		Welcome L'Oréal
+		Welcome
+		{{ user.name}}
 		<br>
 		happy to see you again
 	</h1>
@@ -42,7 +40,7 @@
 		<a href="#" class="consulthistory1">CONSULT THE HISTORY</a>
 		<h2 class="blocconsult1">consult previously generated reports</h2>
 	</div>
-	<a href="#" class="gotowebsite1">GO TO WEBSITE</a>
+	<a href="http://localhost:8082/" class="gotowebsite1">GO TO WEBSITE</a>
 	{{ include("base/footer.html.twig") }}
 
 {% endblock %}
