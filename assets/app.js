@@ -1,6 +1,7 @@
 import './styles/app.scss';
 import './styles/register.scss';
 import $ from 'jquery';
+import ChartConfig from "./js/ChartConfig";
 
 $('#report-upload').change(() => {
     $('.pending-upload').addClass('hidden');
@@ -42,10 +43,31 @@ $('#action-create').click(() => {
     $('#report-form').submit();
 });
 
-function createReport() {
+
+if ($('#chart-data').length ) {
+    const chartData = $('#chart-data').data('chart');
+    let labels = [];
+    let values = [];
+
+    console.log(chartData);
+    const chart = new Chart($('#dataviz-chart'), ChartConfig.load(chartData.type, chartData.data));
+
 
 }
 
-function addComponent() {
-
-}
+// const doc = new jsPDF({
+//     orientation: 'landscape'
+// });
+//
+// window.html2canvas = html2canvas;
+//
+// $('#dataviz-export').click(() => {
+//     // Convert_HTML_To_PDF()
+//     $('#dataviz-export').click(() => {
+//         doc.html($('#data-visualization')[0], {
+//             callback: function (doc) {
+//                 doc.save('dot.pdf');
+//             }
+//         });
+//     });
+// });

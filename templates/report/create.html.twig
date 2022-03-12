@@ -42,12 +42,13 @@
                             <div class="flex w-full justify-between">
                                 <div class="flex-col">
                                     <input type="text" id="title" name="title" class="form-control" placeholder="Title">
-                                    <textarea class="form-control" name="description" placeholder="Your description"></textarea>
+                                    <textarea class="form-control" name="description"
+                                              placeholder="Your description"></textarea>
                                 </div>
                                 <div class="flex-col">
-                                    <input type="text" id="title" name="population" class="form-control"
+                                    <input type="text" id="population" name="population" class="form-control"
                                            placeholder="Report on x persons">
-                                    <input type="text" id="title" name="product" class="form-control"
+                                    <input type="text" id="product" name="product" class="form-control"
                                            placeholder="Products">
                                     <span>mandatory fields *</span>
                                 </div>
@@ -62,28 +63,24 @@
                                      src="{{ asset('images/chev-left.svg') }}">
                                 <ul class="graph-type-list">
                                     <li class="graph-type text-uppercase">
-                                        <span>Chart pie</span>
-                                        <input type="radio" class="hidden" name="graph_type" value="1" checked>
-                                    </li>
-                                    <li class="graph-type text-uppercase">
                                         <span></span>Pie</span>
-                                        <input type="radio" class="hidden" name="graph_type" value="2">
+                                        <input type="radio" class="hidden" name="graph_type" value="pie">
                                     </li>
                                     <li class="graph-type text-uppercase">
                                         <span></span>Radar</span>
-                                        <input type="radio" class="hidden" name="graph_type" value="3">
+                                        <input type="radio" class="hidden" name="graph_type" value="radar">
                                     </li>
                                     <li class="graph-type text-uppercase">
                                         <span>Line chart</span>
-                                        <input type="radio" class="hidden" name="graph_type" value="4">
+                                        <input type="radio" class="hidden" name="graph_type" value="line">
                                     </li>
                                     <li class="graph-type text-uppercase">
                                         <span>Multi Series Pie</span>
-                                        <input type="radio" class="hidden" name="graph_type" value="5">
+                                        <input type="radio" class="hidden" name="graph_type" value="pie2">
                                     </li>
                                     <li class="graph-type text-uppercase selected">
-                                        <span>Stacked bar/line</span>
-                                        <input type="radio" class="hidden" name="graph_type" value="6">
+                                        <span>Stacked bar</span>
+                                        <input type="radio" class="hidden" name="graph_type" value="bar">
                                     </li>
                                 </ul>
                                 <img id="graph-type-right" class="cursor-pointer"
@@ -109,5 +106,9 @@
                 </form>
             </div>
         </div>
+
+        <section id="data-visualization" class="data-visualization">
+            {% include 'report/_visualizer.html.twig' %}
+        </section>
     </div>
 {% endblock %}

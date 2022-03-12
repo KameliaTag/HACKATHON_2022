@@ -1,0 +1,23 @@
+<div class="dataviz-header">
+    <div>LOGO</div>
+    <div>TITLE</div>
+    <div>DATA</div>
+    <button id="dataviz-export">Export</button>
+</div>
+<div class="dataviz-content">
+    {% if chart_data is defined %}
+        <div id="chart-data" data-chart="{{ chart_data | json_encode }}"></div>
+    {% endif %}
+    <div class="content-left w-1/5">
+        SIDE
+    </div>
+    <div class="content-right w-full">
+        <canvas id="dataviz-chart" width="100" height="100"></canvas>
+    </div>
+</div>
+<div class="dataviz-footer">
+    <div>CLIENT</div>
+    <div>NOM DU PRODUIT</div>
+    <div>RAPPORT SUR X PERSONNE</div>
+    <div>N°PAGE</div>
+</div>
