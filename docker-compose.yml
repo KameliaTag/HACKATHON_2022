@@ -93,9 +93,9 @@ services:
     volumes:
       - wp-db-data:/var/lib/mysql
 
-#  mailer:
-#    image: schickling/mailcatcher
-#    ports: [ 1025, 1080 ]
+  mailer:
+    image: schickling/mailcatcher
+    ports: [ 1025, 1080 ]
 
 volumes:
   db-data: {}
